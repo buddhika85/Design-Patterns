@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="f4fd30ed-7b6f-4a9e-9359-c760e12b0705" name="AbstractFactory" linkedPackageId="b41ec975-81cc-44c7-acec-333a1846d7d3" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="03fffeda-0517-48ab-924e-407b791a273e">
+      <elementDefinition Id="e90c32a6-3cdc-4276-90df-ef8b5282282e" />
+      <body>Animal World concrete class do not work with any concreate types, it only knows about abstract types. So, adding new IPlantEater, IMeatEater or IContinentFactory is easy. No need to change the exisiting code</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="8cf3563c-2e39-4b54-8250-3c68e297c19c">
+      <profileInstance Id="92b738f7-e309-40f9-b928-427df4dbe8a1" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="3110008a-e129-4e76-918c-5f9bac24ee00">
+      <profileInstance Id="87190fae-c611-4eb6-9980-6074c60b8104" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="d7eafb19-4998-4992-9f8a-65e74a588b66" name="IMeatEater" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cbacc948-b6ba-405d-989d-32c009af0690" />
+        <ownedOperations>
+          <operation Id="9bbe25db-0859-41ce-9f76-9fba89e0131f" name="string Eat" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="342a8469-2354-4b42-9856-2e4c76fbea95" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a1aff322-82d9-4c09-b911-bc49c89bc558" name="IPlantEater" direction="In" isUnique="false">
+                  <elementDefinition Id="6ee71e5b-2499-49e4-868f-d090ca08c9b4" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="72e2ed84-21c3-458e-9a31-d4d747c4c837" name="IPlantEater" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="712c7af7-e39a-4b07-a7fe-ef8a767b4a59" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c6f60964-2a94-402f-a2fd-f6d7d09adda3" name="Wolf" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cbb8e363-6f8f-4058-a152-89edb6ec17b0" />
+        <suppliersInternal>
+          <interfaceRealization Id="78cb6214-1f39-44ed-87c9-ce74fb1099f9">
+            <interfaceMoniker Id="d7eafb19-4998-4992-9f8a-65e74a588b66" LastKnownName="IMeatEater" />
+            <elementDefinition Id="45fbf2eb-8959-4960-905e-5ccb9396f177" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="a7bf3d64-1d79-430c-bd1b-d27043051ed4" name="string Eat" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="003e9045-c038-4885-a4ab-0ef2fd153f5b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="317c4b2f-3e0e-44c4-92c9-f7c89986eb81" name="IPlantEater" direction="In" isUnique="false">
+                  <elementDefinition Id="4e5089b8-80cf-4227-b60a-b77663f2429b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="64e049e7-2ea3-444a-b8a9-93d004b2a8fc" name="Lion" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9717e6b9-ece1-4cae-ac2f-832010290bdd" />
+        <suppliersInternal>
+          <interfaceRealization Id="007be537-451c-40d8-98ac-5f7ef451ce4d">
+            <interfaceMoniker Id="d7eafb19-4998-4992-9f8a-65e74a588b66" LastKnownName="IMeatEater" />
+            <elementDefinition Id="3e2dca29-2544-4210-8ef9-f4181df2d7cc" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="52490856-670a-4f69-b675-a7a60ba9f870" name="string Eat" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7c302afc-0739-4cbe-94f9-0ce0c5d5ab59" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c33f95c2-244d-463c-acfd-1debd79b8c9f" name="IPlantEater" direction="In" isUnique="false">
+                  <elementDefinition Id="2f740de9-1eb4-475d-be85-2ac1f3526520" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f6c7f8a8-5765-474f-adfc-2f57a9e301f2" name="Bison" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="89611176-8d1c-4445-9796-63b1c0f67361" />
+        <suppliersInternal>
+          <interfaceRealization Id="1f198d96-cc95-470b-a1b8-6ea350560646">
+            <interfaceMoniker Id="72e2ed84-21c3-458e-9a31-d4d747c4c837" LastKnownName="IPlantEater" />
+            <elementDefinition Id="c6b2be05-6663-4a04-830f-e435a3b9a9cd" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="938dd12b-1bac-4eb7-994a-6c6cf1f04998" name="WildeBeest" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ff9268f8-7b45-4ab3-9297-4772ffec2137" />
+        <suppliersInternal>
+          <interfaceRealization Id="5bd7aed6-4844-4ec5-845c-8bfdd9720ae5">
+            <interfaceMoniker Id="72e2ed84-21c3-458e-9a31-d4d747c4c837" LastKnownName="IPlantEater" />
+            <elementDefinition Id="6848e3cd-a09b-4516-9138-e82bb4f96c5c" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="7b86b8f0-7b83-439a-9642-fbb364a85145" name="IContinentFactory" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4d04f05a-13aa-4f62-a945-d3295b2efbe3" />
+        <ownedOperations>
+          <operation Id="ce03fb12-a4fd-4b60-8814-b5a642b6711b" name="IPlantEater CreatePlantEater" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7681634a-6c5b-44b0-b1a9-9b5d527b25d5" />
+          </operation>
+          <operation Id="ad975e8a-53f1-432f-9b7c-b71fb1c0daea" name="IMeatEater CreateMeatEater" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="58751eea-1a0e-48f3-b642-6d6bd0a2ebd0" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="addc2119-a107-49bd-8a25-fa0090dd1cff" name="AmericaFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fbe069e6-3e38-420e-859f-d1eb467de9a5" />
+        <suppliersInternal>
+          <interfaceRealization Id="2a4eac5a-4a6c-4fd2-9ed7-a8fde35fd004">
+            <interfaceMoniker Id="7b86b8f0-7b83-439a-9642-fbb364a85145" LastKnownName="IContinentFactory" />
+            <elementDefinition Id="eafb3aef-1ea0-4af7-bbe4-024e8e4abc7b" />
+          </interfaceRealization>
+          <dependency Id="cef5b173-0254-458c-ae43-3400fdf629fd">
+            <classMoniker Id="f6c7f8a8-5765-474f-adfc-2f57a9e301f2" LastKnownName="Bison" />
+            <elementDefinition Id="930860e9-e894-498e-bb8f-10131118125d" />
+          </dependency>
+          <dependency Id="76f3967b-a4ff-4a0c-904e-a55d257e833c">
+            <classMoniker Id="c6f60964-2a94-402f-a2fd-f6d7d09adda3" LastKnownName="Wolf" />
+            <elementDefinition Id="53eaa4d6-ff18-44d2-ba4d-449edba29541" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="3b49a7ad-d9e3-42b2-9b16-0c9ef40c1d9f" name="IPlantEater CreatePlantEater" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="21239fe8-ba0c-4aed-972a-9c3b059774bd" />
+          </operation>
+          <operation Id="0ed41eaf-5573-46d2-a008-b157991c9cae" name="IMeatEater CreateMeatEater" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f4dd512c-75cc-4764-8257-8106d4b827d3" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ff220824-bf69-4f62-9c11-0891d236055e" name="AfricaFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5e946fe7-3ef6-4d5f-9a4f-345e9b6cd334" />
+        <suppliersInternal>
+          <interfaceRealization Id="beaf791a-e877-45f2-9805-9f4294638f0a">
+            <interfaceMoniker Id="7b86b8f0-7b83-439a-9642-fbb364a85145" LastKnownName="IContinentFactory" />
+            <elementDefinition Id="2832cfd0-a640-42b7-80c3-c25a60dd314f" />
+          </interfaceRealization>
+          <dependency Id="20714687-aaea-4399-96d4-8e95170fba45">
+            <classMoniker Id="938dd12b-1bac-4eb7-994a-6c6cf1f04998" LastKnownName="WildeBeest" />
+            <elementDefinition Id="1fa4b46f-f07f-45fc-b191-130a025d3a68" />
+          </dependency>
+          <dependency Id="438974e9-9b7e-4e1b-9c83-c01fed63ef50">
+            <classMoniker Id="64e049e7-2ea3-444a-b8a9-93d004b2a8fc" LastKnownName="Lion" />
+            <elementDefinition Id="da3eea9a-025d-4ff8-987d-700755218366" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="b5915dc8-e9b0-4285-9a41-310625f541bf" name="IPlantEater CreatePlantEater" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="37f136f0-8aff-4579-bbb5-342175c55b60" />
+          </operation>
+          <operation Id="067c4a68-9af4-405a-bb71-69bf5bbb14ed" name="IMeatEater CreateMeatEater" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ee5aa61f-7798-4850-b281-c0b35dbf67e1" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="69654ccc-0227-4399-bba7-b1d411082400" name="AnimalWorld" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2caccb9e-a5eb-4caf-a7d8-430a1556a4f8" />
+        <suppliersInternal>
+          <dependency Id="e89ab89e-e6ff-422f-b7f5-e5eec97ef417">
+            <interfaceMoniker Id="7b86b8f0-7b83-439a-9642-fbb364a85145" LastKnownName="IContinentFactory" />
+            <elementDefinition Id="3f175070-bf60-414b-8f7d-a02976c95ebc" />
+          </dependency>
+          <dependency Id="f72e5683-6c7c-4e22-a0a6-3a2b93bcdc70">
+            <interfaceMoniker Id="d7eafb19-4998-4992-9f8a-65e74a588b66" LastKnownName="IMeatEater" />
+            <elementDefinition Id="b8c52002-8fde-4f7d-86ed-9713d81a0022" />
+          </dependency>
+          <dependency Id="2b142e85-8756-48cb-bb2e-d22ffa18cf2c">
+            <interfaceMoniker Id="72e2ed84-21c3-458e-9a31-d4d747c4c837" LastKnownName="IPlantEater" />
+            <elementDefinition Id="09bcdcf0-eaee-416a-a083-a66afebd2e57" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="b9158aa5-4907-4f5d-aa21-a430cdcf3451" name="IPlantEater" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="17fd8cdc-814d-4d43-8c60-ebbc7801e805" />
+          </property>
+          <property Id="478da9ed-9ce5-4d2d-baad-1536f3f3f32f" name="IMeatEater" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="88e21d5b-a95d-4d64-add8-f348532b5bca" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="ca8d150e-1116-4885-8041-3f1dce9f570d" name="RunFoodChain" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8b650c6c-cfc2-458f-9c53-5e7d45e21a0e" />
+          </operation>
+          <operation Id="a81cc117-9125-447f-acda-79af4f7a5b81" name="AnimalWorld" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="987d19be-e1c6-4562-8bbc-17a3fec82d2f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2fd2d569-60ac-4d62-ab0d-26ebbc740c7b" name="IContinent" direction="In" isUnique="false">
+                  <elementDefinition Id="7b2f01aa-77d0-4d14-8b68-0ce1bc201386" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="b41ec975-81cc-44c7-acec-333a1846d7d3" name="AbstractFactoryClassDiagram">
+    <elementDefinition Id="ce0b8ea9-501f-43bd-bb79-cb76be4f8d23" />
+  </package>
+</logicalClassDesignerModel>

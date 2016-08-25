@@ -43,8 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AfricaFactory.cs" />
+    <Compile Include="AmericaFactory.cs" />
+    <Compile Include="AnimalWorld_Client.cs" />
+    <Compile Include="Bison.cs" />
+    <Compile Include="IContinentFactory.cs" />
+    <Compile Include="IMeatEater.cs" />
+    <Compile Include="IPlantEater.cs" />
+    <Compile Include="Lion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WildeBeest.cs" />
+    <Compile Include="Wolf.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

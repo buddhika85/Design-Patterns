@@ -18,7 +18,7 @@ namespace Abstract_Factory
             continent = new AfricaFactory();
             world = new AnimalWorld_Client(continent);
             result = world.RunFoodChain();
-            Console.WriteLine(result);                      // Lion eats Wildebeest
+            Console.WriteLine(result);                      // Lion eats Wildebeest 
 
             Console.ReadLine();
         }
